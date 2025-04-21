@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.devteria</groupId>
-	<artifactId>hello-spring-boot</artifactId>
+	<artifactId>identity-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>hello-spring-boot</name>
 	<description>First spring boot project</description>
