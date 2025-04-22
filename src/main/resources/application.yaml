@@ -12,3 +12,6 @@ server:
   port: 8081
   servlet:
     context-path: /identity
+
+jwt:
+  signerKey: "5SBFnUpqWZXx/erx7wCKvlFm0wHMcs/SBTGMBqH3CuxRai6nFCWR/DyWHSuxwpZo"
