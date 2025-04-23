@@ -18,6 +18,7 @@ import java.util.List;
 @RequestMapping("/users")
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
+
 public class UserController {
     UserService userService;
 
@@ -39,8 +40,10 @@ public class UserController {
     }
 
     @PutMapping("/{userId}")
-    UserResponse updateUser(@PathVariable("userId") String userid, @RequestBody UserUpdateRequest request) {
-        return userService.updateUser(userid, request);
+    ApiResponse<Object> updateUser(@PathVariable("userId") String userid, @RequestBody UserUpdateRequest request) {
+        return ApiResponse.builder()
+                .result(userService.updateUser(userid, request))
+                .build();
     }
 
     @DeleteMapping("/{userId}")
